@@ -4,17 +4,22 @@
  *  author: FlareOfGhast
  */
 
-var keypress = require('keypress');
 var child = require('child_process');
 var proc;
+
 // add your servers like the example separated by commas eg. [MOTD,PORT],[MOTD,PORT] 
 // there is no tailing comma
 var servers = [
-	["A MOTD here", 25565]
+	["A MOTD here", 25565],
+	["A Second MOTD",25566]
 ];
 
-// simple output
-console.log("Broadcasting Minecraft servers to LAN")
+// simple output not necessary really
+console.log("Broadcasting Minecraft servers to LAN");
 
-proc = child.spawn("node", ["broadcast",]);
+// spawn child process to run in the background
+proc = child.spawn("node", ["broadcast", servers]);
 proc.on('error', function(e){console.log(e)});
+
+// test that the code has continued on.
+// console.log("Still running on");

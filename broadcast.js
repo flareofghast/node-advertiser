@@ -5,6 +5,15 @@ var dgram = require('dgram');
 var socket = dgram.createSocket("udp4");
 var broadcastIP = "255.255.255.255";
 var broadcastPort = 4445;
+var args = process.argv.slice(2);
+
+// create a new server array from arguments passed in;
+// executed like "node broadcast MOTD,PORT"
+// more then one can be created using combinations MOTD,PORT,MOTD,PORT
+var servers = [];
+for(var i = 0; i < args[0].split(',').length; i+=2){
+	servers.push([args[0].split(',')[i],args[0].split(',')[i+1]]);
+}
 
 //allow broadcast
 socket.bind(function(){
