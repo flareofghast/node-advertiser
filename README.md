@@ -3,8 +3,7 @@ node-advertiser
 
 Node.js implementation of minecraft advertiser
 
-First make sure you add your server MOTD and port to the servers variable 
-as detailed in the node.js file. Then run.
+First make sure you add your server MOTD and port to the servers file, if you have more then one server add a comma to the last ["MOTD",port] entry and add that format on a new line. Then run.
 
 To run simply type node advert.js
 

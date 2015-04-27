@@ -1,0 +1,23 @@
+{
+  "name": "mc-advertiser",
+  "version": "0.0.1",
+  "description": "This will allow you to broadcast your minecraft server games on your local network.",
+  "main": "advert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flareofghast/node-advertiser.git"
+  },
+  "keywords": [
+    "minecraft",
+    "broadcast"
+  ],
+  "author": "Peter Salzmann (https://github.com/flareofghast)",
+  "license": "public domain",
+  "bugs": {
+    "url": "https://github.com/flareofghast/node-advertiser/issues"
+  },
+  "homepage": "https://github.com/flareofghast/node-advertiser"
+}

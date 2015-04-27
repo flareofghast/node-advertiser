@@ -4,18 +4,11 @@
  *  author: FlareOfGhast
  */
 
-var keypress = require('keypress');
 var dgram = require('dgram');
 var socket = dgram.createSocket("udp4");
 var broadcastIP = "255.255.255.255"
 var broadcastPort = 4445
-var child = require('child_process');
-
-// add your servers like the example separated by commas eg. [MOTD,PORT],[MOTD,PORT] 
-// there is no tailing comma
-var servers = [
-	["A MOTD here", 25565]
-];
+var servers = require('./servers')
 
 // allow broadcast
 socket.bind( function(){
