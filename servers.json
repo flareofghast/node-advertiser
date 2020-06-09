@@ -1,4 +1,4 @@
 [
-	["Here is a MOTD", 25565]
+	{"ip": "127.0.0.1", "motd": "Here is a MOTD", "port": 25565}
 	
 ]
