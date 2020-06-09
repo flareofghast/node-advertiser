@@ -14,14 +14,14 @@ var udp_broadcaster;
 // simple output
 console.log("Broadcasting Minecraft servers to LAN")
 
-// run broadcast method every 1500 ms
+// run broadcast method every BROADCAST_DELAY_MS
 setInterval(broadcast, BROADCAST_DELAY_MS);
 
 
 function broadcast() {
 	// for each server in servers[] create a new message and send through socket
 	servers.forEach(srv => {
-		var msg = Buffer.from("[MOTD]" + srv.motd + "[/MOTD][AD]" + srv.port + "[/AD]");
+		var msg = Buffer.from(`[MOTD]${srv.motd}[/MOTD][AD]${srv.port}[/AD]`);
 		if (msg) {
 			if (udp_broadcaster) {
 			  udp_broadcaster.send(msg, 0, msg.length, broadcastPort, broadcastIP);
